@@ -5,12 +5,12 @@
  4. Create a Markdown file
  5. Run the `marked` script and pass it a Markdown file
 
- ### Install Example
+### Install Example
  1. `$ git clone https://github.com/spencerdcarlson/md2html.git`
  2. `$ echo "export PATH=${PWD}marked:$PATH" >> ~/.bash_profile`
  3. `$ source ~/.bash_profile`
 
- ### Usage Example
+### Usage Example
  1. `$ echo "#Markdown File Test" > README.md`
  2. `$ marked README.md`
 
