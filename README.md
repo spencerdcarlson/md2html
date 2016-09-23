@@ -7,8 +7,14 @@
 
 ### Install Example
  1. `$ git clone https://github.com/spencerdcarlson/md2html.git`
- 2. `$ echo "export PATH=${PWD}marked:$PATH" >> ~/.bash_profile`
+ 2. `$ echo "export PATH=${PWD}/:\$PATH" >> ~/.bash_profile`
  3. `$ source ~/.bash_profile`
+ 
+_install with one line_
+
+`$ git clone https://github.com/spencerdcarlson/md2html.git && \
+    echo "export PATH=${PWD}/:\$PATH" >> ~/.bash_profile && \
+    source ~/.bash_profile`
 
 ### Usage Example
  1. `$ echo "#Markdown File Test" > README.md`
