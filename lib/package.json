@@ -1,0 +1,9 @@
+{
+    "name" : "md2html",
+    "description" : "dependencies to run the marked module locally",
+    "license" : "MIT",
+    "dependencies" :
+    {
+        "marked" : "0.3.6"
+    }
+}
