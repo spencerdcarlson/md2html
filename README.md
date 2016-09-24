@@ -12,9 +12,9 @@
  
 _install with one line_
 
-`$ git clone https://github.com/spencerdcarlson/md2html.git && \
-    echo "export PATH=${PWD}/:\$PATH" >> ~/.bash_profile && \
-    source ~/.bash_profile`
+`$ git clone https://github.com/spencerdcarlson/md2html.git && \`
+ ` echo "export PATH=${PWD}/:\$PATH" >> ~/.bash_profile && \`
+ ` source ~/.bash_profile`
 
 ### Usage Example
  1. `$ echo "#Markdown File Test" > README.md`
