@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# get living directory of script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
 # make node modules avalible 
-export NODE_PATH=$PWD/lib/node_modules/
+export NODE_PATH=$DIR/lib/node_modules/
 
 # create css file
 echo "table,td,th{border-collapse:collapse;border:1px solid #ddd;text-align:left;padding:7px}ul{list-style-type:square}" > /tmp/style-marked.css
@@ -9,7 +11,7 @@ echo "table,td,th{border-collapse:collapse;border:1px solid #ddd;text-align:left
 # get the file name from the command line arg. This file will be converted from Markdown to HTML
 FILE=$1
 
-PREFIX=lib/ # set this to the relative path from the marked script to the marked.js file 
+PREFIX=$DIR/lib/ # set this to the relative path from the marked script to the marked.js file 
 
 # if now comand line arg is avlible set the default file name to README.md
 if [ $# -eq 0 ]
@@ -21,4 +23,4 @@ fi
 npm --prefix $PREFIX install
 
 # run the marked.js script and open the result
-node ./${PREFIX}marked.js $FILE > /tmp/marked.html && open /tmp/marked.html
+node ${PREFIX}marked.js $FILE > /tmp/marked.html && open /tmp/marked.html
